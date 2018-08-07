@@ -1,17 +1,15 @@
 package main
 
-import "fmt"
-
 // import "time"
 
 //"time"
-
-type Gorra struct {
+// estructura de datos
+/* type Gorra struct {
 	marca  string
 	color  string
 	precio float32
 	plana  bool
-}
+} */
 
 func main() {
 	//time.Sleep(time.Second * 5) // retardo al ejecutar el programa
@@ -41,25 +39,60 @@ func main() {
 	// llamada de funciones
 	// prueba();
 
-	var gorraNegra = Gorra{
+	//estructura de datos llena
+	/* var gorraNegra = Gorra{
 		marca:  "Nike",
 		color:  "Negro",
 		precio: 25.50,
 		plana:  false}
+	fmt.Print(gorraNegra) */
 
-	fmt.Print(gorraNegra)
+	//llamada de funciones
+	/* fmt.Println(gorras(45, "EUROS"))
+	pantalon("rojo", "largo", "sin bolsillos", "nike") */
 
-	fmt.Println(gorras(45, "EUROS"))
+	// DEFINIR UN ARRAY FORMA 1
+	/* var peliculas [3]string
+	peliculas[0] = "La verdad duele"
+	peliculas[1] = "Ciudadano Ejemplar"
+	peliculas[2] = "Gran torino"
 
+	fmt.Println(peliculas[1]) */
+
+	//declarar arrays forma 2
+	/* peliculas := [3]string{
+		"la verdad duele",
+		"ciudadano ejemplar",
+		"batman"}
+	fmt.Println(peliculas[1]) */
+
+	//Arrays multidimencional
+	/* var peliculas [3][2]string
+	peliculas[0][0] = "La verdad duele"
+	peliculas[0][1] = "Mientras duermes"
+	peliculas[1][0] = "Ciudadno enjemplar"
+	peliculas[1][1] = "El señor de los anillos"
+	peliculas[2][0] = "Gran Torino"
+	peliculas[2][1] = "A todo gas"
+
+	fmt.Println(peliculas) */
 }
 
-func gorras(pedido float32, moneda string) (string, float32, string) {
+//func con closures
+/* func gorras(pedido float32, moneda string) (string, float32, string) {
 	precio := func() float32 {
 		return pedido * 7
 	}
 	return "numero de gorras pedidas:", precio(), moneda
-}
+} */
 
+//func mult atributos
+/* func pantalon(atributos ...string) {
+	for _, atributo := range atributos {
+		fmt.Println(atributo)
+	}
+}
+*/
 // definir funciones
 /* func prueba(){
 
