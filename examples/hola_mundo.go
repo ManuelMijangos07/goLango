@@ -76,6 +76,20 @@ func main() {
 	peliculas[2][1] = "A todo gas"
 
 	fmt.Println(peliculas) */
+
+	//slice
+	/* peliculas := []string{
+		"La verdad duele",
+		"ciudadano ejemplar"}
+	fmt.Println(peliculas) */
+
+	//agregar elementos al array
+	//peliculas = append(peliculas, "sin límites")
+
+	// longitud de array
+	//fmt.Println(len(peliculas))
+	// imprimir elementos de array desde hasta
+	//fmt.Println(peliculas[0:3])
 }
 
 //func con closures
