@@ -1,18 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "HOLA MUNDO DESDE GO")
-	})
+	router := mux.NewRouter().StrictSlash(true)
+	router.HandleFunc("/", Index)
+	router.HandleFunc("/movies_list", moviesList)
+	router.HandleFunc("/movie_show/{id}", movieShow)
 
-	server := http.ListenAndServe(":8080", nil)
-
+	server := http.ListenAndServe(":8080", router)
 	log.Fatal(server)
-	fmt.Println("El servidor está corriendo en http://localhost:8080")
 }
